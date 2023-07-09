@@ -28,5 +28,10 @@
   			where authorname like concat('%', #{keyword}, '%');
   		</if>
   	</select>
+  	
+  	<!-- 작가 디테일 페이지 -->
+  	<select id="authorGetDetail" resultType="com.yeon.model.AuthorVO">
+  		select * from vam_author where authorid = #{authorId}
+  	</select>
   
   </mapper>

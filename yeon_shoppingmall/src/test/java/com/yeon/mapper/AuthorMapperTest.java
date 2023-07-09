@@ -45,7 +45,7 @@ public class AuthorMapperTest {
 	}*/
 	
 	/* 작가 총 수 테스트 */
-	@Test
+	/*@Test
 	public void authorGetTotalTest() throws Exception{
 		Criteria cri = new Criteria();
 		cri.setKeyword("테스트");
@@ -53,6 +53,15 @@ public class AuthorMapperTest {
 		int total = mapper.authorGetTotal(cri);
 		
 		System.out.println("total..........." + total);
+	}*/
+	
+	/* 작가 상세 페이지 */
+	@Test
+	public void authorGetDetailTest() {
+		int authorId = 30;
+		AuthorVO author = mapper.authorGetDetail(authorId);
+		
+		System.out.println("author......." + author);
 	}
 	
 	

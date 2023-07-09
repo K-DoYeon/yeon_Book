@@ -16,7 +16,7 @@ public class AuthorServiceTest {
 	@Autowired
 	private AuthorService service;
 	
-	@Test
+	/*@Test
 	public void authorEnrollTest() throws Exception{
 		AuthorVO author = new AuthorVO();
 		
@@ -25,5 +25,13 @@ public class AuthorServiceTest {
 		author.setAuthorIntro("테스트 소개");
 		
 		service.authorEnroll(author);
+	}*/
+	
+	/* 작가 상세 페이지 */
+	@Test
+	public void authorGetDetailTest() throws Exception{
+		int authorId = 20;
+		
+		//Log.info("author........" + service.authorGetDetail(authorId));
 	}
 }
