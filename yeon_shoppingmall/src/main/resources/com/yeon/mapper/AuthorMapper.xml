@@ -19,5 +19,14 @@
   		order by authorid desc
   		limit #{skip}, #{amount}
   	</select>
+  	
+  	<!-- 작가 수 -->
+  	<select id= "authorGetTotal" resultType="int">
+  		select count(*) from vam_author
+  		
+  		<if test="keyword != null">
+  			where authorname like concat('%', #{keyword}, '%');
+  		</if>
+  	</select>
   
   </mapper>

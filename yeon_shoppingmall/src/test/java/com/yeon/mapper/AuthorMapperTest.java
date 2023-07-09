@@ -31,7 +31,8 @@ public class AuthorMapperTest {
 		mapper.authorEnroll(author);
 	}*/
 	
-	@Test
+	/* 작가 목록 테스트 */
+	/*@Test
 	public void authorGetListTest() throws Exception{
 		Criteria cri = new Criteria(3,10); //3페이지 & 10개 행 표시
 		cri.setKeyword("테스트");
@@ -41,5 +42,18 @@ public class AuthorMapperTest {
 		for(int i = 0; i < list.size(); i++) {
 			System.out.println("list" + i + "............" + list.get(i));
 		}
+	}*/
+	
+	/* 작가 총 수 테스트 */
+	@Test
+	public void authorGetTotalTest() throws Exception{
+		Criteria cri = new Criteria();
+		cri.setKeyword("테스트");
+		
+		int total = mapper.authorGetTotal(cri);
+		
+		System.out.println("total..........." + total);
 	}
+	
+	
 }
